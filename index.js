@@ -5,14 +5,13 @@ const app = new Vue({
       ended: false
     },
     methods: {
-      punch: function() {
+      punch() {
         this.health = this.health - 10;
         if(this.health <= 0 ) {
             this.ended = true;
         }
-        console.log("clicked", this.health);
       },
-      restart: function() {
+      restart() {
         this.health = 100;
         this.ended = false;
       }
